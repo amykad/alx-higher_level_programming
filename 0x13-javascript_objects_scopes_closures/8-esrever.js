@@ -1,13 +1,9 @@
-
-rts.esrever = function (list) {
-  let len = list.length - 1;
-  let i = 0;
-  while ((len - i) > 0) {
-    const aux = list[len];
-    list[len] = list[i];
-    list[i] = aux;
-    i++;
-    len--;
+#!/usr/bin/node
+exports.esrever = function (list) {
+  if (list === undefined) return [];
+  let reversed = [];
+  for (let l = list.length - 1; l >= 0; l--) {
+    reversed.push(list[l]);
   }
-  return list;
+  return reversed;
 };
